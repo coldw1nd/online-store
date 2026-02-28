@@ -1,12 +1,13 @@
 $primary-color: #007bff;
 $primary-hover: #0056b3;
+$danger-color: #dc3545;
+$danger-hover: #c82333;
 $text-color: #333333;
 $bg-color: #ffffff;
 $card-radius: 12px;
 
 @mixin hover-effect(){
     transition: all 0.3s ease;
-
     &:hover{
        transform: translateY(-5px);
        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
@@ -26,12 +27,14 @@ $card-radius: 12px;
         width: 100%;
         height: 200px;
         overflow: hidden;
+        background-color: #fff;
     }
 
     &__image{
         width: 100%;
         height: 100%;
         object-fit: contain;
+        padding: 10px;
     }
 
     &__content{
@@ -48,7 +51,14 @@ $card-radius: 12px;
         color: #666666;
         font-size: 14px;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__price {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #111;
     }
 
     &__button{
@@ -61,9 +71,19 @@ $card-radius: 12px;
         font-size: 16px;
         cursor: pointer;
         transition: background-color 0.3s;
+        margin-bottom: 8px;
 
         &:hover{
             background-color: $primary-hover;
+        }
+
+        &--danger {
+            background-color: $danger-color;
+            margin-bottom: 0;
+            
+            &:hover {
+                background-color: $danger-hover;
+            }
         }
     }
 }
