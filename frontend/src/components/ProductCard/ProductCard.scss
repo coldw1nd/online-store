@@ -1,0 +1,69 @@
+$primary-color: #007bff;
+$primary-hover: #0056b3;
+$text-color: #333333;
+$bg-color: #ffffff;
+$card-radius: 12px;
+
+@mixin hover-effect(){
+    transition: all 0.3s ease;
+
+    &:hover{
+       transform: translateY(-5px);
+       box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+}
+
+.card{
+    width: 300px;
+    background-color: $bg-color;
+    border-radius: $card-radius;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    @include hover-effect();
+
+    &__image-container{
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__content{
+        padding: 20px;
+    }
+
+    &__title{
+        margin-top: 0;
+        font-size: 20px;
+        color: $text-color;
+    }
+
+    &__description{
+        color: #666666;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    &__button{
+        width: 100%;
+        padding: 10px 15px;
+        background-color: $primary-color;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover{
+            background-color: $primary-hover;
+        }
+    }
+}
