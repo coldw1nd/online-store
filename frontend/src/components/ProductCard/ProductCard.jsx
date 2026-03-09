@@ -2,7 +2,7 @@ import React from "react";
 import './ProductCard.scss';
 import watchImg from '../../assets/smartwatch.jpg';
 
-function ProductCard({ product, onDelete }) {
+function ProductCard({ product, onDelete, isAdmin }) {
     return (
         <div className="card">
             <div className="card__image-container">
@@ -20,9 +20,12 @@ function ProductCard({ product, onDelete }) {
                 <button className="card__button">
                     В корзину
                 </button>
-                <button className="card__button card__button--danger" onClick={() => onDelete(product.id)}>
-                    Удалить
-                </button>
+                
+                {isAdmin && (
+                    <button className="card__button card__button--danger" onClick={() => onDelete(product.id)}>
+                        Удалить
+                    </button>
+                )}
             </div>
         </div>
     )

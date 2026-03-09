@@ -1,10 +1,10 @@
 # Online Store Project
 
-Результат выполнения практических заданий 1-6.
+В проекте реализован Fullstack интернет-магазин с безопасной авторизацией и ролевой моделью.
 
 ## Стек технологий
 - **Frontend:** React, Vite, SCSS, Axios
-- **Backend:** Node.js, Express, Swagger, CORS
+- **Backend:** Node.js, Express, Swagger, bcrypt, jsonwebtoken, cookie-parser
 
 ## Запуск проекта
 
